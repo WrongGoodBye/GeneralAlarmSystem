@@ -241,10 +241,28 @@ class TGeneralAlarmSystemApplication(object):
     def on_start_up(self):    
         if self.mode=='debug':
             # Confirm to continue with debug-mode
-            if messagebox.askyesno('Confirmation','Continue with Debug-mode?'):
-                self.system_print('start with debug-mode')
+
+            #PopUpWindow=True
+            PopUpWindow=False """ You can choose which messages shown """
+
+            if PopUpWindow:
+                """ popup window for macOS """
+                if messagebox.askyesno('Confirmation','Continue with Debug-mode?'):
+                    self.system_print('start with debug-mode')
+                else:
+                    self.on_shut_down()
             else:
-                self.on_shut_down()
+                """ show on terminal for no-popup supported """
+                loop=True
+                while loop:
+                    print('======================================')
+                    print('== continue with debug mode ? [y/n] ==')
+                    print('======================================')
+                    YN=input('>> ')
+                    if YN=='y' or YN=='yes':
+                        loop=False
+                    elif YN=='n' or YN=='no':
+                        self.on_shut_down()                
                 
         else:
             self.system_print('start with normal')
