@@ -243,7 +243,7 @@ class TGeneralAlarmSystemApplication(object):
             # Confirm to continue with debug-mode
 
             #PopUpWindow=True
-            PopUpWindow=False """ You can choose which messages shown """
+            PopUpWindow=False 
 
             if PopUpWindow:
                 """ popup window for macOS """
