@@ -48,6 +48,11 @@ Checking scripts of logger files should be written by users for each purpose.
 
     $ git clone https://github.com/WrongGoodBye/GeneralAlarmSystem
 
+## Phone-calling
+- The phone-calling function is important for a notice of current status to shifter, but this sample code does not support
+- In case of that you want to add it, you have to prepare the USB-modem, the switching-hub, and the program which is optimaized with USB-modem.
+- Or, connect and use web-servise of calling phone number
+
 ## Author
 
 OBARA, shuhei
