@@ -48,12 +48,6 @@ Checking scripts of logger files should be written by users for each purpose.
 
     $ git clone https://github.com/WrongGoodBye/GeneralAlarmSystem
 
-## Anything Else
-
-AnythingAnythingAnything
-AnythingAnythingAnything
-AnythingAnythingAnything
-
 ## Author
 
 OBARA, shuhei
@@ -61,4 +55,4 @@ OBARA, shuhei
 
 ## License
 
-[MIT](https://github.com/WrongGoodBye/GeneralAlarmSystem/LICENSE.txt)
+Based on MIT license (https://github.com/WrongGoodBye/GeneralAlarmSystem/LICENSE.txt)
