@@ -16,6 +16,7 @@ from tkinter import Tk, ttk
 import datetime
 import subprocess
 import argparse
+import shutil
 
 import AlertScripts.Mail  # Mail transponder script
 
@@ -84,10 +85,17 @@ class TGeneralAlarmSystemApplication(object):
 
         elif self.mode == 'clean':
             # clean option case, delete unnecessary files
+            # delete files
             delete_file_list = [self.CONFIG_FILENAME]
             for delete_file in delete_file_list:
                 self.system_print('delete {}'.format(delete_file))
                 os.remove(delete_file)
+            # delete compiled files
+            delete_pycache_list = ['./AlertScripts/__pycache__',
+                                   './CheckingScripts/__pycache__']
+            for delete_dir in delete_pycache_list:
+                self.system_print('delete {}'.format(delete_dir))
+                shutil.rmtree(delete_dir)
             sys.exit()
 
         else:
