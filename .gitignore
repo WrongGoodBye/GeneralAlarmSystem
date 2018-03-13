@@ -1,6 +1,6 @@
 # ignore binaries
-./AlertScripts/__pycache__
-./CheckingScripts/__pycache__
+AlertScripts/__pycache__
+CheckingScripts/__pycache__
 
 # ignore config
-./config.txt
+config.txt
