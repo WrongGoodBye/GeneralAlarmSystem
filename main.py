@@ -88,12 +88,16 @@ class TGeneralAlarmSystemApplication(object):
             # delete files
             delete_file_list = [self.CONFIG_FILENAME]
             for delete_file in delete_file_list:
+                if not os.path.isfile(delete_file):
+                    continue
                 self.system_print('delete {}'.format(delete_file))
                 os.remove(delete_file)
             # delete compiled files
             delete_pycache_list = ['./AlertScripts/__pycache__',
                                    './CheckingScripts/__pycache__']
             for delete_dir in delete_pycache_list:
+                if not os.path.isdir(delete_dir):
+                    continue                                     
                 self.system_print('delete {}'.format(delete_dir))
                 shutil.rmtree(delete_dir)
             sys.exit()
